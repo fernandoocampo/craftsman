@@ -10,3 +10,11 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# others binaries
+.idea*
+.DS_Store
+bin/*
+vendor/*
+debug
+pack-service-linux-amd64
