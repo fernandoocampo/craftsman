@@ -12,4 +12,7 @@ type CraftsmanService interface {
 	// FindByID search a craftsman with the given id
 	// and return it.
 	FindByID(id string) (*data.Craftsman, error)
+
+	// ChangeState changes the state of a craftsman.
+	ChangeState(id string, newstate int8) error
 }
