@@ -4,6 +4,7 @@ import "github.com/fernandoocampo/craftsman/data"
 
 // BasicCraftsman implements the behavior for craftsman functionalities.
 type BasicCraftsman struct {
+	data data.CraftsmanData
 }
 
 // Create a craftsman using a data function.
