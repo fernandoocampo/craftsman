@@ -8,9 +8,9 @@ type CraftsmanData interface {
 	// otherwise returns nil.
 	Insert(craftsman *Craftsman) error
 
-	// SearchById finds and returns a craftsman entity that has the given id.
+	// SearchByID finds and returns a craftsman entity that has the given id.
 	// If something goes wrong in the search, it returns an error otherwise returns nil.
-	SearchById(id string) (*Craftsman, error)
+	SearchByID(id string) (*Craftsman, error)
 
 	// UpdateState receives a craftsman id and a new state to update the craftsman's
 	// state field. If something goes wrong it returns a error otherwise returns nil.
