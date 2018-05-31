@@ -8,12 +8,16 @@ type Skill struct {
 
 // Stats contains the data of different statistics for skills.
 type Stats struct {
-	Feedback  int `json:"feedback" bson:"feedback"` // How many users has given a feedback
-	Validated int `json:"orders" bson:"orders"`     // How many users has given a credit
-	Rating    int `json:"rating" bson:"rating"`     // The score average given by other users
+	Feedback int `json:"feedback" bson:"feedback"` // How many users has given a feedback
+	Credits  int `json:"credits" bson:"credits"`   // How many users has given a credit
+	Rating   int `json:"rating" bson:"rating"`     // The score average given by other users
 }
 
 // Craftsman defines state
+// { "username": "theuser", "firstname": "The", "lastname": "user",
+//	 "email": "theuser@domain.com", "email2": "theuser2@domain.com",
+//   "state": 1, "kwds": "cook chef ramen", "skills": [{"name": "cook",
+//	 "stats": {"feedback": 200, "credits": 50, "rating": 234}}] }
 type Craftsman struct {
 	Username  string  `json:"username" bson:"username"` // The name of the user
 	Firstname string  `json:"firstname" bson:"firstname"`
