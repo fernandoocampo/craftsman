@@ -2,7 +2,6 @@ package data
 
 // MongoData for mongo connection a data process.
 type MongoData struct {
-	db         string
 	collection string
 }
 
@@ -24,7 +23,6 @@ func (m *MongoData) UpdateState(id string, newstate int8) error {
 }
 
 // SetMongoData set the data for database and collection
-func (m *MongoData) SetMongoData(db string, collection string) {
-	m.db = db
+func (m *MongoData) SetMongoData(collection string) {
 	m.collection = collection
 }
