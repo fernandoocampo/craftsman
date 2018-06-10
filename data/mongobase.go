@@ -25,8 +25,8 @@ var pwddb string
 // mongo session
 var mgoSession *mgo.Session
 
-// InitMgoSession creates and returns a new Mongo Session.
-func InitMgoSession() *mgo.Session {
+// InitMongoSession creates and returns a new Mongo Session.
+func InitMongoSession() *mgo.Session {
 	mgodialinfo := &mgo.DialInfo{
 		Addrs:    mgoaddrs,
 		Timeout:  time.Duration(timeout) * time.Second,
