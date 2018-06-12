@@ -1,5 +1,7 @@
 package data
 
+import "time"
+
 // Skill contain data for craftsman's skills
 type Skill struct {
 	Name  string `json:"name" bson:"name"`
@@ -19,12 +21,13 @@ type Stats struct {
 //   "state": 1, "kwds": "cook chef ramen", "skills": [{"name": "cook",
 //	 "stats": {"feedback": 200, "credits": 50, "rating": 234}}] }
 type Craftsman struct {
-	Username  string  `json:"username" bson:"username"` // The name of the user
-	Firstname string  `json:"firstname" bson:"firstname"`
-	Lastname  string  `json:"lastname" bson:"lastname"`
-	Email     string  `json:"email" bson:"email"`
-	Email2    string  `json:"email2" bson:"email2"`                     // Second email
-	State     int8    `json:"state" bson:"cstate"`                      // The craftsman current state
-	Kwds      string  `json:"kwds" bson:"kwds"`                         // keywords for searching
-	Skills    []Skill `json:"skills,omitempty" bson:"skills,omitempty"` // Craftsman's skills
+	Username  string    `json:"username" bson:"username"` // The name of the user
+	Firstname string    `json:"firstname" bson:"firstname"`
+	Lastname  string    `json:"lastname" bson:"lastname"`
+	Email     string    `json:"email" bson:"email"`
+	Email2    string    `json:"email2" bson:"email2"`                     // Second email
+	State     int8      `json:"state" bson:"cstate"`                      // The craftsman current state
+	Kwds      string    `json:"kwds" bson:"kwds"`                         // keywords for searching
+	Skills    []Skill   `json:"skills,omitempty" bson:"skills,omitempty"` // Craftsman's skills
+	Updated   time.Time `json:"updated,omitempty" bson:"updated"`
 }
